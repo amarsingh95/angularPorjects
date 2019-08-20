@@ -1,0 +1,45 @@
+
+      <div class="row justify-content-center">
+          <div class="col-md-7">
+            <h4 class="font-weight-dark mt-4 text-black">Dynamically Add Rows</h4>
+            <!---<p class="lead text-black-50">Use just two Bootstrap 4 utility classes and three custom CSS rules and you will have a flexbox enabled sticky footer for your website!</p>--->
+          </div>
+      </div>   
+
+
+      <hr>
+      <div class="row">
+        <div class="col-md-12"></div>
+        <div class="col-md-2">
+           <input type="button" class="btn btn-primary btn-block" value="Add Row" (click)="addRow()">
+        </div>
+        <div class="col-md-2">
+            <input type="button" class="btn btn-primary btn-block" value="Submit  " (click)="postData()"> 
+        </div>
+    </div>
+     <br/>
+      <div class="row">
+          <div class="row" *ngFor="let dynamic of dynamicRowarray;let i=index;">
+          <div class="col-md-3">
+            <label for="fnameid">First Name</label>
+            <input type="text" class="form-control" id="fnameid"  placeholder="First Name"  name="name" [(ngModel)]="this.dynamicRowarray[i].name">
+          </div>
+          <div class="col-md-3">
+            <label for="lastnameid">Last Name</label>
+            <input type="text" class="form-control" id="lastnameid" placeholder="Last Name"  name="lastname" [(ngModel)]="this.dynamicRowarray[i].lastname">
+          </div>
+          <div class="col-md-3">
+            <label for="emailid">Email</label>
+            <input type="email" class="form-control" id="emailid" placeholder="Email"  name="emailid" [(ngModel)]="this.dynamicRowarray[i].emailid">
+          </div>
+          <div class="col-md-3">
+            <label for="delid">Delete</label>
+            <input type="button" class="form-control btn-primary" id="delid" name="del" (click)="DelRows(i)" value="Delete">
+          </div>
+        </div>
+      </div>
+
+        
+        
+      
+    
