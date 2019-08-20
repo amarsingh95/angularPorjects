@@ -17,20 +17,7 @@ export class DataserviceService {
   }
   //to post Dynamic Row Data to Backend test.php
 
-  getData()
-  {
-   return this.http.get("https://jsonplaceholder.typicode.com/users");
-  }
-
-  getDataComp():Observable<any>
-  {
-   return this.http.get("http://localhost/test.php"); 
-  }
-
-  getState()
-  {
-   return this.http.get("http://localhost/state.php"); 
-  }
+  
 
   
 }
